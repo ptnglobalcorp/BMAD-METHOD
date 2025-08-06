@@ -1,6 +1,6 @@
 {
   "name": "@ptnglobal/bmad-method",
-  "version": "4.35.3",
+  "version": "4.35.4",
   "description": "Breakthrough Method of Agile AI-driven Development",
   "main": "tools/cli.js",
   "bin": {
@@ -58,7 +58,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bmadcode/BMAD-METHOD.git"
+    "url": "git+https://github.com/ptnglobalcorp/BMAD-METHOD.git"
   },
   "engines": {
     "node": ">=20.0.0"
