@@ -1,6 +1,6 @@
 {
   "name": "@ptnglobal/bmad-method",
-  "version": "4.35.5",
+  "version": "4.35.4",
   "description": "Breakthrough Method of Agile AI-driven Development",
   "main": "tools/cli.js",
   "bin": {

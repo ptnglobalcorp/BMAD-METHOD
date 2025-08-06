@@ -1,9 +1,16 @@
-## [4.35.3](https://github.com/bmadcode/BMAD-METHOD/compare/v4.35.2...v4.35.3) (2025-08-06)
+## [4.35.4](https://github.com/ptnglobalcorp/BMAD-METHOD/compare/v4.35.3...v4.35.4) (2025-08-06)
 
 
 ### Bug Fixes
 
-* doc location improvement ([1676f51](https://github.com/bmadcode/BMAD-METHOD/commit/1676f5189ed057fa2d7facbd6a771fe67cdb6372))
+* change version name ([0a04dfc](https://github.com/ptnglobalcorp/BMAD-METHOD/commit/0a04dfc31440ce4e9cafaad9a2b7df8198829dfb))
+* correct repo name ([b525894](https://github.com/ptnglobalcorp/BMAD-METHOD/commit/b5258941a2b3386d543ec10fb28b646ca8582c19))
+
+## [4.35.3](https://github.com/bmadcode/BMAD-METHOD/compare/v4.35.2...v4.35.3) (2025-08-06)
+
+### Bug Fixes
+
+- doc location improvement ([1676f51](https://github.com/bmadcode/BMAD-METHOD/commit/1676f5189ed057fa2d7facbd6a771fe67cdb6372))
 
 ## [4.35.2](https://github.com/bmadcode/BMAD-METHOD/compare/v4.35.1...v4.35.2) (2025-08-06)
 
