@@ -895,11 +895,11 @@ class Installer {
     if (config.installType === "single-agent") {
       console.log(
         chalk.dim(
-          "\nNeed other agents? Run: npx @ptnglobal/bmad-method install --agent=<name>"
+          "\nNeed other agents? Run: npx bmad-method install --agent=<name>"
         )
       );
       console.log(
-        chalk.dim("Need everything? Run: npx @ptnglobal/bmad-method install --full")
+        chalk.dim("Need everything? Run: npx bmad-method install --full")
       );
     }
 
@@ -943,7 +943,7 @@ class Installer {
     }
 
     console.log(
-      chalk.dim("\nInstall with: npx @ptnglobal/bmad-method install --agent=<id>\n")
+      chalk.dim("\nInstall with: npx bmad-method install --agent=<id>\n")
     );
   }
 
@@ -968,7 +968,7 @@ class Installer {
     }
 
     console.log(
-      chalk.dim("Install with: npx @ptnglobal/bmad-method install --full --expansion-packs <id>\n")
+      chalk.dim("Install with: npx bmad-method install --full --expansion-packs <id>\n")
     );
   }
 

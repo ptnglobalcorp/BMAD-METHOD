@@ -1,11 +1,11 @@
 {
-  "name": "@ptnglobal/bmad-method",
+  "name": "bmad-method",
   "version": "4.35.3",
   "description": "BMad Method installer - AI-powered Agile development framework",
   "main": "lib/installer.js",
   "bin": {
     "bmad": "./bin/bmad.js",
-    "@ptnglobal/bmad-method": "./bin/bmad.js"
+    "bmad-method": "./bin/bmad.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
