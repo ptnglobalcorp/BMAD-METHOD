@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bmad-team/bmad-method.git"
+    "url": "https://github.com/ptnglobalcorp/BMAD-METHOD.git"
   },
   "bugs": {
-    "url": "https://github.com/bmad-team/bmad-method/issues"
+    "url": "https://github.com/ptnglobalcorp/BMAD-METHOD/issues"
   },
-  "homepage": "https://github.com/bmad-team/bmad-method#readme"
+  "homepage": "https://github.com/ptnglobalcorp/BMAD-METHOD#readme"
 }
