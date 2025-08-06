@@ -1,6 +1,6 @@
 # BMad-Method: Universal AI Agent Framework
 
-[![Version](https://img.shields.io/npm/v/bmad-method?color=blue&label=version)](https://www.npmjs.com/package/bmad-method)
+[![Version](https://img.shields.io/npm/v/@ptnglobal/bmad-method?color=blue&label=version)](https://www.npmjs.com/package/@ptnglobal/bmad-method)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
@@ -52,7 +52,7 @@ This two-phase approach eliminates both **planning inconsistency** and **context
 **Stay up-to-date effortlessly!** If you already have BMad-Method installed in your project, simply run:
 
 ```bash
-npx bmad-method install
+npx @ptnglobal/bmad-method install
 # OR
 git pull
 npm run install:bmad
@@ -74,7 +74,7 @@ This makes it easy to benefit from the latest improvements, bug fixes, and new a
 **Just run one of these commands:**
 
 ```bash
-npx bmad-method install
+npx @ptnglobal/bmad-method install
 # OR if you already have BMad installed:
 git pull
 npm run install:bmad
@@ -126,18 +126,18 @@ The BMad-Method includes a powerful codebase flattener tool designed to prepare 
 
 ```bash
 # Basic usage - creates flattened-codebase.xml in current directory
-npx bmad-method flatten
+npx @ptnglobal/bmad-method flatten
 
 # Specify custom input directory
-npx bmad-method flatten --input /path/to/source/directory
-npx bmad-method flatten -i /path/to/source/directory
+npx @ptnglobal/bmad-method flatten --input /path/to/source/directory
+npx @ptnglobal/bmad-method flatten -i /path/to/source/directory
 
 # Specify custom output file
-npx bmad-method flatten --output my-project.xml
-npx bmad-method flatten -o /path/to/output/codebase.xml
+npx @ptnglobal/bmad-method flatten --output my-project.xml
+npx @ptnglobal/bmad-method flatten -o /path/to/output/codebase.xml
 
 # Combine input and output options
-npx bmad-method flatten --input /path/to/source --output /path/to/output/codebase.xml
+npx @ptnglobal/bmad-method flatten --input /path/to/source --output /path/to/output/codebase.xml
 ```
 
 ### Example Output

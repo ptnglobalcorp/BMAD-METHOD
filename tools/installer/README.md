@@ -4,5 +4,5 @@
 
 ```bash
 # Interactive installation
-npx bmad-method install
+npx @ptnglobal/bmad-method install
 ```
