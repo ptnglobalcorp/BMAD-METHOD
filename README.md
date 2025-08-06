@@ -102,7 +102,7 @@ This single command handles:
 ### Alternative: Clone and Build
 
 ```bash
-git clone https://github.com/bmadcode/bmad-method.git
+git clone https://github.com/ptnglobalcorp/bmad-method.git
 npm run install:bmad # build and install all to a destination folder
 ```
 
@@ -168,8 +168,8 @@ The generated XML file contains all your project's source code in a structured f
 ## Support
 
 - 💬 [Discord Community](https://discord.gg/gk8jAdXWmj)
-- 🐛 [Issue Tracker](https://github.com/bmadcode/bmad-method/issues)
-- 💬 [Discussions](https://github.com/bmadcode/bmad-method/discussions)
+- 🐛 [Issue Tracker](https://github.com/ptnglobalcorp/bmad-method/issues)
+- 💬 [Discussions](https://github.com/ptnglobalcorp/bmad-method/discussions)
 
 ## Contributing
 
@@ -181,6 +181,6 @@ The generated XML file contains all your project's source code in a structured f
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-[![Contributors](https://contrib.rocks/image?repo=bmadcode/bmad-method)](https://github.com/bmadcode/bmad-method/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=ptnglobalcorp/bmad-method)](https://github.com/ptnglobalcorp/bmad-method/graphs/contributors)
 
 <sub>Built with ❤️ for the AI-assisted development community</sub>

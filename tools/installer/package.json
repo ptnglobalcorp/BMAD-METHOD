@@ -1,5 +1,5 @@
 {
-  "name": "bmad-method",
+  "name": "@ptnglobal/bmad-method",
   "version": "4.35.3",
   "description": "BMad Method installer - AI-powered Agile development framework",
   "main": "lib/installer.js",
