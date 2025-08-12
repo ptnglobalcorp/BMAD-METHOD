@@ -1,0 +1,268 @@
+template:
+  id: fetched-prd-template-v1
+  name: Fetched Product Requirements Document
+  version: 1.0
+  output:
+    format: markdown
+    filename: docs/fetched-prds/{{optional_id}}_{{task_or_feature_name}}.md
+    title: "{{source_name}} - Fetched PRD: {{task_or_feature_name}}"
+
+metadata:
+  source_system: "{{source_system}}"
+  source_url: "{{source_url}}"
+  fetch_timestamp: "{{fetch_timestamp}}"
+  fetched_by: "Friday PRD Agent"
+  original_id: "{{original_id}}"
+  last_updated: "{{last_updated}}"
+
+workflow:
+  mode: automated
+  purpose: Format externally fetched PRD content for dev agent consumption
+
+sections:
+  - id: source-context
+    title: Source Context
+    instruction: |
+      Document the external source and retrieval context to provide dev agent with
+      provenance and reliability information about the requirements.
+    sections:
+      - id: source-info
+        title: Source Information
+        type: key-value
+        fields:
+          - key: "System"
+            value: "{{source_system}}"
+          - key: "Original URL/ID"
+            value: "{{source_url}} / {{original_id}}"
+          - key: "Fetch Date"
+            value: "{{fetch_timestamp}}"
+          - key: "Last Updated"
+            value: "{{last_updated}}"
+          - key: "Confidence Level"
+            value: "{{confidence_level}}"
+            choices: [High, Medium, Low]
+      - id: data-quality
+        title: Data Quality Assessment
+        instruction: |
+          Assess the completeness and reliability of the fetched requirements.
+          Note any missing information or areas requiring clarification.
+        type: paragraphs
+
+  - id: task-summary
+    title: Task/Feature Summary
+    instruction: |
+      Provide a clear, concise summary of what needs to be implemented.
+      This becomes the primary context for the dev agent.
+    sections:
+      - id: objective
+        title: Implementation Objective
+        type: paragraphs
+        instruction: 1-2 paragraphs describing what the dev agent needs to build
+      - id: scope
+        title: Scope and Boundaries
+        type: bullet-list
+        instruction: What is included and excluded from this implementation task
+      - id: priority
+        title: Priority Level
+        type: single-value
+        choices: [Critical, High, Medium, Low]
+        instruction: Implementation priority from source system
+
+  - id: functional-requirements
+    title: Functional Requirements
+    instruction: |
+      Extract and format all functional requirements in a dev-agent friendly format.
+      Each requirement should be actionable and testable.
+    sections:
+      - id: core-functionality
+        title: Core Functionality
+        type: numbered-list
+        prefix: FR
+        instruction: |
+          Primary functional requirements that define what the system must do.
+          Format: FR#: [Requirement description]
+        examples:
+          - "FR1: The system must validate user input according to specified business rules"
+          - "FR2: The API must return structured error responses for invalid requests"
+      - id: user-interactions
+        title: User Interactions
+        type: numbered-list
+        prefix: UI
+        instruction: |
+          Specific user interface and interaction requirements.
+          Format: UI#: [Interaction requirement]
+        condition: has_ui_requirements
+      - id: data-requirements
+        title: Data Requirements
+        type: numbered-list
+        prefix: DR
+        instruction: |
+          Data structure, validation, and persistence requirements.
+          Format: DR#: [Data requirement]
+      - id: integration-requirements
+        title: Integration Requirements
+        type: numbered-list
+        prefix: IR
+        instruction: |
+          External system integration and API requirements.
+          Format: IR#: [Integration requirement]
+        condition: has_integrations
+
+  - id: non-functional-requirements
+    title: Non-Functional Requirements
+    instruction: |
+      Technical constraints and quality requirements that guide implementation approach.
+    sections:
+      - id: performance
+        title: Performance Requirements
+        type: numbered-list
+        prefix: PR
+        instruction: |
+          Performance, scalability, and efficiency requirements.
+          Format: PR#: [Performance requirement]
+        condition: has_performance_reqs
+      - id: security
+        title: Security Requirements
+        type: numbered-list
+        prefix: SR
+        instruction: |
+          Security, authentication, and authorization requirements.
+          Format: SR#: [Security requirement]
+        condition: has_security_reqs
+      - id: reliability
+        title: Reliability & Availability
+        type: numbered-list
+        prefix: RR
+        instruction: |
+          Reliability, availability, and error handling requirements.
+          Format: RR#: [Reliability requirement]
+        condition: has_reliability_reqs
+
+  - id: acceptance-criteria
+    title: Acceptance Criteria
+    instruction: |
+      Clear, testable criteria that define when the implementation is complete.
+      Format these for direct use by dev agent in testing and validation.
+    sections:
+      - id: functional-acceptance
+        title: Functional Acceptance
+        type: numbered-list
+        instruction: |
+          Testable criteria for functional requirements completion.
+          Each criterion should be verifiable through testing or demonstration.
+      - id: technical-acceptance
+        title: Technical Acceptance
+        type: numbered-list
+        instruction: |
+          Technical quality gates and code standards that must be met.
+        condition: has_technical_criteria
+
+  - id: implementation-context
+    title: Implementation Context
+    instruction: |
+      Additional context that helps the dev agent understand the broader
+      system and make appropriate implementation decisions.
+    sections:
+      - id: existing-system
+        title: Existing System Context
+        type: paragraphs
+        instruction: |
+          Relevant information about the current system that impacts implementation.
+          Include architecture constraints, existing patterns, or dependencies.
+        condition: is_brownfield
+      - id: related-components
+        title: Related Components
+        type: bullet-list
+        instruction: |
+          Other system components, services, or modules that this implementation
+          will interact with or affect.
+        condition: has_dependencies
+      - id: business-rules
+        title: Business Rules
+        type: numbered-list
+        prefix: BR
+        instruction: |
+          Business logic rules that must be implemented.
+          Format: BR#: [Business rule]
+        condition: has_business_rules
+
+  - id: technical-notes
+    title: Technical Implementation Notes
+    instruction: |
+      Technical guidance and constraints from the source system that inform
+      implementation approach.
+    sections:
+      - id: architecture-constraints
+        title: Architecture Constraints
+        type: bullet-list
+        instruction: |
+          Technical architecture constraints or requirements from source.
+        condition: has_arch_constraints
+      - id: technology-preferences
+        title: Technology Preferences
+        type: bullet-list
+        instruction: |
+          Preferred technologies, frameworks, or approaches specified in source.
+        condition: has_tech_preferences
+      - id: implementation-hints
+        title: Implementation Hints
+        type: bullet-list
+        instruction: |
+          Technical hints, patterns, or approaches suggested in the source.
+        condition: has_impl_hints
+
+  - id: validation-checklist
+    title: Dev Agent Validation Checklist
+    instruction: |
+      Pre-formatted checklist for the dev agent to verify implementation completeness.
+      This becomes the acceptance testing framework.
+    type: checklist
+    sections:
+      - id: functional-validation
+        title: Functional Validation
+        type: checklist
+        items:
+          - "All functional requirements (FR#) implemented and tested"
+          - "User interactions (UI#) working as specified"
+          - "Data requirements (DR#) properly handled"
+          - "Integration requirements (IR#) functional and tested"
+      - id: quality-validation
+        title: Quality Validation
+        type: checklist
+        items:
+          - "Performance requirements (PR#) met or tested"
+          - "Security requirements (SR#) implemented"
+          - "Error handling and reliability (RR#) working"
+          - "Code follows project standards and patterns"
+      - id: acceptance-validation
+        title: Acceptance Validation
+        type: checklist
+        items:
+          - "All functional acceptance criteria verified"
+          - "Technical acceptance criteria met"
+          - "Integration with existing system validated"
+          - "Documentation updated appropriately"
+
+  - id: source-references
+    title: Source References
+    instruction: |
+      Maintain links and references back to the original source for
+      dev agent to access additional context if needed.
+    sections:
+      - id: original-links
+        title: Original Source Links
+        type: bullet-list
+        instruction: |
+          Direct links to original requirements, tickets, or documentation.
+      - id: related-items
+        title: Related Items
+        type: bullet-list
+        instruction: |
+          Links to related tickets, dependencies, or reference materials.
+        condition: has_related_items
+      - id: contact-info
+        title: Subject Matter Expert Contacts
+        type: bullet-list
+        instruction: |
+          Contact information for clarification or additional context.
+        condition: has_contacts

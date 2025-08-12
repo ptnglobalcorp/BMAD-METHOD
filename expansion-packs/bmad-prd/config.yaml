@@ -1,0 +1,9 @@
+name: bmad-prd
+version: 1.0.0
+short-title: Product Requirements Fetcher
+description: >-
+  This expansion pack extends BMad Method with comprehensive product requirements
+  fetching capabilities. It's designed for teams that need to retrieve and manage
+  product requirements from various external sources.
+author: DangTran (Dang Tran)
+slashPrefix: bmadPrd
